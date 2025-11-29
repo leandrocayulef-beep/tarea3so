@@ -9,20 +9,20 @@
 #include <algorithm>
 #include <iomanip>
 
-using namespace std; // Esto nos permite quitar todos los "std::"
+using namespace std;
 
 // Estructuras de datos
 struct Pagina {
     int id_proceso;
     int numero_pagina;
-    bool en_ram;       // true = RAM, false = SWAP
-    int numero_marco;  // Si está en RAM, en qué marco físico
+    bool en_ram;
+    int numero_marco;
 };
 
 struct Proceso {
     int id;
     int tamanio_mb;
-    vector<int> indices_tabla_paginas; // vector sin std::
+    vector<int> indices_tabla_paginas;
 };
 
 class SimuladorMemoria {
@@ -58,7 +58,7 @@ private:
 
 public:
     SimuladorMemoria(int ram_mb, int p_size_kb, int p_min, int p_max) {
-        rng.seed(random_device()()); // random_device sin std::
+        rng.seed(random_device()());
         
         tamanio_pagina = p_size_kb * 1024;
         tamanio_total_ram = (long long)ram_mb * 1024 * 1024;
