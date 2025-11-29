@@ -7,7 +7,7 @@ g++ -std=c++11 main.cpp -o tarea3
 # Ejecutar
 ./tarea3
 
-Ejemplos de inputs:
+# Ejemplos de inputs:
 
   Ingrese tamano de Memoria Fisica (MB): 64
   
